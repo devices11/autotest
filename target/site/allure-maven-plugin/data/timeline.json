@@ -1,0 +1,20 @@
+{
+  "hosts" : [ {
+    "title" : "DESKTOP-J832LA6",
+    "threads" : [ {
+      "title" : "4520@DESKTOP-J832LA6.main(1)",
+      "testCases" : [ {
+        "uid" : "6cb411c36ab34009",
+        "name" : "testInsurance",
+        "title" : "Страхование путешественников",
+        "time" : {
+          "start" : 1517669926339,
+          "stop" : 1517669961937,
+          "duration" : 35598
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      } ]
+    } ]
+  } ]
+}
