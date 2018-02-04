@@ -7,39 +7,29 @@ import java.util.HashMap;
 
 import static junit.framework.TestCase.assertTrue;
 
-public class FormalizeSteps extends BasePageSteps{
+public class FormalizeSteps{
 
     @Step("поле {0} заполняется значением {1}")
     public void stepFillField(String field, String value){
-        new Formalize(driver).fillField(field, value);
+        new Formalize().fillField(field, value);
     }
 
     @Step("поле {0} заполнено значением {1}")
     public void checkFillField(String field, String value){
-        String actual = new Formalize(driver).getFillField(field);
+        String actual = new Formalize().getFillField(field);
         assertTrue(String.format("Значение поля [%s] равно [%s]. Ожидалось - [%s]", field, actual, value),
                 actual.equals(value));
     }
 
-    @Step("Заполняются поля:")
-    public void stepFillFields(HashMap<String, String> fields){
-        fields.forEach(this::stepFillField);
-    }
-
     @Step("Нажатие кнопки продолжить")
     public void clickSendButton(String button){
-        new Formalize(driver).selectButton(button);
+        new Formalize().selectButton(button);
     }
 
 
     @Step("Проверка ошибки")
     public void stepCheckFieldErrorMessage(String textError){
-        new Formalize(driver).checkFieldErrorMessage(textError);
-    }
-
-    @Step("Поля заполнены верно")
-    public void checkFillFields(HashMap<String, String> fields){
-        fields.forEach(this::checkFillField);
+        new Formalize().checkFieldErrorMessage(textError);
     }
 
 }

@@ -2,11 +2,12 @@ pages\Formalize.class
 pages\BasePage.class
 steps\FormalizeSteps.class
 util\TestProperties.class
-steps\MainPageSteps.class
-util\AllureListener.class
+util\AllureReporter.class
 pages\TravelInsurancePage.class
 steps\ChoicePolicySteps.class
 steps\TravelInsurancePageSteps.class
 pages\ChoicePolicy.class
+steps\ScenarioSteps.class
 pages\MainPage.class
 steps\BasePageSteps.class
+steps\MainPageSteps.class

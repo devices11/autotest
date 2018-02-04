@@ -1,13 +1,12 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import steps.BasePageSteps;
 
 
 public class TravelInsurancePage extends BasePage{
@@ -19,9 +18,9 @@ public class TravelInsurancePage extends BasePage{
     public WebElement title;
 
 
-    public TravelInsurancePage (WebDriver driver){
-        PageFactory.initElements(driver, this);
-        (new WebDriverWait(driver, 20))
+    public TravelInsurancePage (){
+        PageFactory.initElements(BasePageSteps.getDriver(), this);
+        (new WebDriverWait(BasePageSteps.getDriver(), 20))
                 .until(ExpectedConditions.visibilityOf(title));
     }
 

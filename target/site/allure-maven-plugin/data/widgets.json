@@ -11,9 +11,9 @@
         "broken" : 0
       },
       "time" : {
-        "start" : 1517669926339,
-        "stop" : 1517669961937,
-        "duration" : 35598
+        "start" : 1517728716119,
+        "stop" : 1517728770418,
+        "duration" : 54299
       }
     },
     "defects" : {
@@ -23,8 +23,8 @@
     "xunit" : {
       "totalCount" : 1,
       "items" : [ {
-        "uid" : "c7aafd6b46110b4f",
-        "title" : "Insurance test",
+        "uid" : "aaf7b20df4137d97",
+        "title" : "Страхование",
         "statistic" : {
           "total" : 1,
           "passed" : 1,
@@ -38,7 +38,7 @@
     "behaviors" : {
       "totalCount" : 1,
       "items" : [ {
-        "title" : "Without feature",
+        "title" : "Страхование",
         "statistic" : {
           "total" : 1,
           "passed" : 1,

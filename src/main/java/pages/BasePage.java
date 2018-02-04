@@ -13,7 +13,7 @@ public class BasePage {
         element.sendKeys(value);
     }
 
-    public void checkFillField(String value, WebElement element) {
-        assertEquals(value, element.getAttribute("value"));
-    }
+//    public void checkFillField(String value, WebElement element) {
+//        assertEquals(value, element.getAttribute("value"));
+//    }
 }

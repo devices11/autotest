@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import steps.BasePageSteps;
 
 public class MainPage {
 
@@ -15,8 +16,8 @@ public class MainPage {
     WebElement subMenu;
 
 
-    public MainPage (WebDriver driver){
-        PageFactory.initElements(driver, this);
+    public MainPage (){
+        PageFactory.initElements(BasePageSteps.getDriver(), this);
     }
 
     public void selectMainMenu(String menuItem){

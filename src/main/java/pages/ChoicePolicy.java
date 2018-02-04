@@ -7,6 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import steps.BasePageSteps;
+
+import java.util.ArrayList;
 
 public class ChoicePolicy {
 
@@ -19,9 +22,9 @@ public class ChoicePolicy {
     @FindBy(xpath = "//span[contains(@class,'b-button-block-center')]")
     public WebElement buttonFormalize;
 
-    public ChoicePolicy(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-        (new WebDriverWait(driver, 10))
+    public ChoicePolicy() {
+        PageFactory.initElements(BasePageSteps.getDriver(), this);
+        (new WebDriverWait(BasePageSteps.getDriver(), 10))
                 .until(ExpectedConditions.visibilityOf(title));
     }
 

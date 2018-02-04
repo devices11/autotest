@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import steps.BasePageSteps;
 
 import static org.junit.Assert.assertEquals;
 
@@ -55,9 +56,9 @@ public class Formalize extends BasePage{
     WebElement fieldErrorMessage;
 
 
-    public Formalize(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-        (new WebDriverWait(driver, 10))
+    public Formalize() {
+        PageFactory.initElements(BasePageSteps.getDriver(), this);
+        (new WebDriverWait(BasePageSteps.getDriver(), 10))
             .until(ExpectedConditions.visibilityOf(title));
     }
 
